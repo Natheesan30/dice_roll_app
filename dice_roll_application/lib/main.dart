@@ -1,9 +1,27 @@
-import 'package:flutter/material.dart'; 
-void divide(int num1, int num2){
-  int result = num1 / num2;
-  print(result);
+import 'package:flutter/material.dart';
+
+void addTwoNumber({required double number1,required double number2}){
+    double answer = number1 + number2;
+    print(answer); 
 }
+
 void main(){
-  //runApp(); // Build the UI
-  divide(4,2);
+  addTwoNumber(number1: 3.2, number2: 2.3);
+  runApp(MaterialApp(
+    home: HelloWorldApp(),
+  ));
+}
+
+class HelloWorldApp extends StatelessWidget {
+  const HelloWorldApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(
+        title: Text('This is the App Bar!'),
+        backgroundColor: Colors.blue,
+      ),
+    );
+  }
 }
